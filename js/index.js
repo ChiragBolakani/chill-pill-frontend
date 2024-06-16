@@ -23,7 +23,7 @@ document.addEventListener('dblclick', (e)=>{
     document.body.style.backgroundSize="cover"
 
     const song = songData.songs[Math.floor(Math.random() * songData.songs.length)];
-    audioElement.src =  song.url
+    audioElement.src =  new URL(song.url)
     audioElement.title = song.name 
     song_status.innerText= audioElement.title
     audioElement.play()
